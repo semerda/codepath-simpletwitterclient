@@ -28,6 +28,7 @@ import com.codepath.apps.simpletwitterclient.models.Tweet;
 import com.codepath.apps.simpletwitterclient.net.TwitterClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -147,33 +148,35 @@ public class ComposeTweetDialogFragment extends DialogFragment {
             );
         } else {
             // Test data
-            setupAuthenticatedUser(view, "Ernest Semerda", "ernestsemerda", "https://pbs.twimg.com/profile_images/72457982/ernest_semerda_400x400.jpg");
+            //setupAuthenticatedUser(view, "Ernest Semerda", "ernestsemerda", "https://pbs.twimg.com/profile_images/72457982/ernest_semerda_400x400.jpg");
 
-        /*
-        client.getAccountCredentials(new JsonHttpResponseHandler() {
-            @Override
-            public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
-                //Log.d("DEBUG-2", response.toString());
-                try {
-                    setupAuthenticatedUser(view, response.getString("name"), response.getString("screen_name"), response.getString("profile_image_url_https").replace("_normal", "_bigger"););
-                } catch (JSONException e) {
-                    e.printStackTrace();
+            // Real data
+            client.getAccountCredentials(new JsonHttpResponseHandler() {
+                @Override
+                public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
+                    //Log.d("DEBUG-2", response.toString());
+                    try {
+                        setupAuthenticatedUser(view,
+                                response.getString("name"),
+                                response.getString("screen_name"),
+                                response.getString("profile_image_url_https").replace("_normal", "_bigger"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
                 }
-            }
-            @Override
-            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
-                Log.d("DEBUG", throwable.toString());
-            }
-            @Override
-            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONArray errorResponse) {
-                Log.d("DEBUG", errorResponse.toString());
-            }
-            @Override
-            public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
-                Log.d("DEBUG", errorResponse.toString());
-            }
-        });
-        */
+                @Override
+                public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                    Log.d("DEBUG", throwable.toString());
+                }
+                @Override
+                public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONArray errorResponse) {
+                    Log.d("DEBUG", errorResponse.toString());
+                }
+                @Override
+                public void onFailure(int statusCode, Header[] headers, Throwable throwable, JSONObject errorResponse) {
+                    Log.d("DEBUG", errorResponse.toString());
+                }
+            });
         }
 
         //String title = getArguments().getString("title");

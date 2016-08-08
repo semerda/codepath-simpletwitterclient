@@ -10,7 +10,6 @@ import android.widget.Toast;
 
 import com.codepath.apps.simpletwitterclient.R;
 import com.codepath.apps.simpletwitterclient.TwitterApplication;
-import com.codepath.apps.simpletwitterclient.activities.TimelineActivity;
 import com.codepath.apps.simpletwitterclient.fragments.ComposeTweetDialogFragment;
 import com.codepath.apps.simpletwitterclient.fragments.DetailTweetDialogFragment;
 import com.codepath.apps.simpletwitterclient.models.Tweet;
@@ -65,9 +64,9 @@ public class TweetHandler {
 
                 Toast.makeText(mContext, "Tweet Retweeted.", Toast.LENGTH_SHORT).show();
 
-                // Refresh parent activity
-                TimelineActivity callingActivity = (TimelineActivity) mContext;
-                callingActivity.sendRefreshRequest();
+                // Refresh parent activity -- TODO: probably better to update inline than refresh
+                //TimelineActivity callingActivity = (TimelineActivity) mContext;
+                //callingActivity.sendRefreshRequest();
             }
 
             @Override
@@ -92,9 +91,9 @@ public class TweetHandler {
 
                 Toast.makeText(mContext, "Tweet Favorited.", Toast.LENGTH_SHORT).show();
 
-                // Refresh parent activity
-                TimelineActivity callingActivity = (TimelineActivity) mContext;
-                callingActivity.sendRefreshRequest();
+                // Refresh parent activity -- TODO: probably better to update inline than refresh
+                //TimelineActivity callingActivity = (TimelineActivity) mContext;
+                //callingActivity.sendRefreshRequest();
             }
 
             @Override
