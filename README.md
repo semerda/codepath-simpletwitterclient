@@ -64,11 +64,6 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 - [Active record style SQLite persistence for Android](https://github.com/pardom/ActiveAndroid)
 - [Debugging with Stetho](https://guides.codepath.com/android/Debugging-with-Stetho)
 
-Incuded but not used (TODO)
-
-- [Display videos in a TextureView using a custom MediaPlayer controller](https://github.com/malmstein/fenster)
-- [VideoPlayerManager](https://github.com/danylovolokh/VideoPlayerManager)
-
 ## License
 
     Copyright 2016 Ernest Semerda (http://www.ernestsemerda.com/)
