@@ -1,0 +1,67 @@
+apply plugin: 'com.android.application'
+apply plugin: 'android-apt'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
+
+    defaultConfig {
+        applicationId "com.codepath.apps.simpletwitterclient"
+        minSdkVersion 16
+        targetSdkVersion 24
+    }
+
+    dataBinding.enabled = true
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+repositories {
+    jcenter()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+    compile('com.codepath.libraries:android-oauth-handler:1.0.0@aar') {
+        transitive = true
+    }
+
+    compile 'com.android.support:appcompat-v7:24.1.1'
+    // https://github.com/loopj/android-async-http
+    compile 'com.loopj.android:android-async-http:1.4.9'
+    // https://github.com/pardom/ActiveAndroid
+    compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+    // https://guides.codepath.com/android/Debugging-with-Stetho
+    //compile 'com.facebook.stetho:stetho:1.3.1'
+    // https://inthecheesefactory.com/blog/get-to-know-glide-recommended-by-google/en
+    compile 'com.github.bumptech.glide:glide:3.5.2'
+    compile 'com.android.support:support-v4:24.1.1'
+    // https://github.com/codepath/android_guides/wiki/Using-the-RecyclerView
+    compile 'com.android.support:recyclerview-v7:24.1.1'
+    compile 'jp.wasabeef:recyclerview-animators:2.2.3'
+    compile 'com.android.support:design:24.1.1'
+    // https://github.com/afollestad/material-dialogs
+    compile 'com.afollestad.material-dialogs:core:0.8.6.2'
+    // http://jakewharton.github.io/butterknife/
+    compile 'com.jakewharton:butterknife:8.2.1'
+    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+    // http://guides.codepath.com/android/Using-Parceler
+    compile 'org.parceler:parceler-api:1.1.1'
+    apt 'org.parceler:parceler:1.1.1'
+    // http://guides.codepath.com/android/ActiveAndroid-Guide
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+    // https://github.com/malmstein/fenster
+    // https://github.com/danylovolokh/VideoPlayerManager
+}

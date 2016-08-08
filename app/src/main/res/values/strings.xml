@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="home">Home</string>
+    <string name="BLANK"></string>
+
+    <string name="app_name">Simple Twitter Client</string>
+    <string name="action_settings">Action Settings</string>
+    <string name="title_activity_timeline">Home Timeline</string>
+    <string name="login_label">Connect to Twitter</string>
+
+    <string name="tweet">TWEET</string>
+    <string name="whats_happening">What\'s happening?</string>
+    <string name="compose_a_tweet">Componse a Tweet</string>
+    <string name="close_x">X</string>
+
+    <!-- Date Util -->
+    <string name="date_util_term_less">less than</string>
+    <string name="date_util_term_a">a</string>
+    <string name="date_util_term_an">an</string>
+
+    <string name="date_util_unit_second">second</string>
+    <string name="date_util_unit_seconds">seconds</string>
+    <string name="date_util_unit_minute">minute</string>
+    <string name="date_util_unit_minutes">minutes</string>
+    <string name="date_util_unit_hour">hour</string>
+    <string name="date_util_unit_hours">hours</string>
+    <string name="date_util_unit_day">day</string>
+    <string name="date_util_unit_days">days</string>
+    <string name="date_util_unit_month">month</string>
+    <string name="date_util_unit_months">months</string>
+    <string name="date_util_unit_year">year</string>
+    <string name="date_util_unit_years">years</string>
+
+    <string name="date_util_prefix_lt">less than a</string>
+    <string name="date_util_prefix_about">about</string>
+    <string name="date_util_prefix_over">over</string>
+    <string name="date_util_prefix_almost">almost</string>
+
+    <string name="date_util_suffix">ago</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="large_text">...</string>
+    <string name="show_detail">Show Detail</string>
+
+</resources>
